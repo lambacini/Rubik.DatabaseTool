@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!--  This is the file that defines the actual layout and type of the commands.
+        It is divided in different sections (e.g. command definition, command
+        placement, ...), with each defining a specific set of properties.
+        See the comment before each section for more details about how to
+        use it. -->
+
+  <!--  The VSCT compiler (the tool that translates this file into the binary 
+        format that VisualStudio will consume) has the ability to run a preprocessor 
+        on the vsct file; this preprocessor is (usually) the C++ preprocessor, so 
+        it is possible to define includes and macros with the same syntax used 
+        in C++ files. Using this ability of the compiler here, we include some files 
+        defining some of the constants that we will use inside the file. -->
+
+  <!--This is the file that defines the IDs for all the commands exposed by VisualStudio. -->
+  <Extern href="stdidcmd.h"/>
+
+  <!--This header contains the command ids for the menus provided by the shell. -->
+  <Extern href="vsshlids.h"/>
+
+  <!--Definition of some VSCT specific constants. In this sample we use it for the IDs inside the guidOfficeIcon group. -->
+  <Extern href="msobtnid.h"/>
+
+  <Extern href="VSDbgCmd.h" />
+  <Extern href="VsDebugGuids.h"/>
+
+  
+  <!--The Commands section is where we the commands, menus and menu groups are defined.
+      This section uses a Guid to identify the package that provides the command defined inside it. -->
+  <Commands package="guidPackage">
+  
+  <Groups>
+    <Group guid="guidRubikToolsAddinCommandSet" id="Group1" priority="0x0100"/>
+	</Groups>
+
+  <Buttons>
+    <Button guid="guidRubikToolsAddinCommandSet" id="Button1" priority="0x0100">
+				<Icon guid="guidOfficeIcon" id="msotcidProperties" />
+				<Strings>
+            <CommandName>cmdidButton1</CommandName>
+            <ButtonText>Button1</ButtonText>
+            <MenuText>Button1</MenuText>
+            <ToolTipText>Button1</ToolTipText>
+		    </Strings>
+	  </Button>
+	  <Button guid="guidRubikToolsAddinCommandSet" id="Button3" priority="0x0100">
+				<Icon guid="guidOfficeIcon" id="msotcidCodeWindow" />
+				<Strings>
+            <CommandName>cmdidButton3</CommandName>
+            <ButtonText>Button3</ButtonText>
+            <MenuText>Button3</MenuText>
+            <ToolTipText>Button3</ToolTipText>
+		    </Strings>
+	  </Button>
+	</Buttons>
+
+  <Menus>
+    <Menu guid="guidRubikToolsAddinCommandSet" id="Menu1" type="Menu" priority="0x0100">
+			   <Strings>
+	       <CommandName>Menu1</CommandName>
+         <ButtonText>Menu1</ButtonText>
+         <MenuText>Menu1</MenuText>
+         <ToolTipText>Menu1</ToolTipText>
+		   		</Strings>
+		</Menu> 
+
+    	  </Menus>
+
+
+
+  </Commands>
+
+  <CommandPlacements>
+     <CommandPlacement guid="guidRubikToolsAddinCommandSet" id="Button1" priority="0x0100"> 
+	         <Parent guid="guidRubikToolsAddinCommandSet" id="Group1" />
+		   </CommandPlacement> 
+	     <CommandPlacement guid="guidRubikToolsAddinCommandSet" id="Button3" priority="0x0100"> 
+	         <Parent guid="guidRubikToolsAddinCommandSet" id="Group1" />
+		   </CommandPlacement> 
+	     <CommandPlacement guid="guidRubikToolsAddinCommandSet" id="Group1" priority="0x0100">
+	         <Parent guid="guidRubikToolsAddinCommandSet" id="Menu1" />
+		   </CommandPlacement> 
+		</CommandPlacements>
+  
+  <VisibilityConstraints>
+		<VisibilityItem guid="guidRubikToolsAddinCommandSet" id="Button1" context="GUID_TextEditorFactory" />
+        		<VisibilityItem guid="guidRubikToolsAddinCommandSet" id="Button1" context="UICONTEXT_Debugging" />
+        		<VisibilityItem guid="guidRubikToolsAddinCommandSet" id="Button1" context="UICONTEXT_DesignMode" />
+        		<VisibilityItem guid="guidRubikToolsAddinCommandSet" id="Button1" context="UICONTEXT_EmptySolution" />
+        		<VisibilityItem guid="guidRubikToolsAddinCommandSet" id="Button1" context="UICONTEXT_FullScreenMode" />
+        		<VisibilityItem guid="guidRubikToolsAddinCommandSet" id="Button1" context="UICONTEXT_NoSolution" />
+        		<VisibilityItem guid="guidRubikToolsAddinCommandSet" id="Button1" context="UICONTEXT_SolutionBuilding" />
+        		<VisibilityItem guid="guidRubikToolsAddinCommandSet" id="Button1" context="UICONTEXT_SolutionExists" />
+        		<VisibilityItem guid="guidRubikToolsAddinCommandSet" id="Button1" context="UICONTEXT_SolutionExistsAndNotBuildingAndNotDebugging" />
+        		<VisibilityItem guid="guidRubikToolsAddinCommandSet" id="Button1" context="UICONTEXT_SolutionHasMultipleProjects" />
+        		<VisibilityItem guid="guidRubikToolsAddinCommandSet" id="Button1" context="UICONTEXT_SolutionHasSingleProject" />
+        		<VisibilityItem guid="guidRubikToolsAddinCommandSet" id="Button1" context="UICONTEXT_NotBuildingAndNotDebugging" />
+        		<VisibilityItem guid="guidRubikToolsAddinCommandSet" id="Menu1" context="GUID_TextEditorFactory" />
+        		<VisibilityItem guid="guidRubikToolsAddinCommandSet" id="Menu1" context="UICONTEXT_Debugging" />
+        		<VisibilityItem guid="guidRubikToolsAddinCommandSet" id="Menu1" context="UICONTEXT_DesignMode" />
+        		<VisibilityItem guid="guidRubikToolsAddinCommandSet" id="Menu1" context="UICONTEXT_EmptySolution" />
+        		<VisibilityItem guid="guidRubikToolsAddinCommandSet" id="Menu1" context="UICONTEXT_FullScreenMode" />
+        		<VisibilityItem guid="guidRubikToolsAddinCommandSet" id="Menu1" context="UICONTEXT_NoSolution" />
+        		<VisibilityItem guid="guidRubikToolsAddinCommandSet" id="Menu1" context="UICONTEXT_SolutionBuilding" />
+        		<VisibilityItem guid="guidRubikToolsAddinCommandSet" id="Menu1" context="UICONTEXT_SolutionExists" />
+        		<VisibilityItem guid="guidRubikToolsAddinCommandSet" id="Menu1" context="UICONTEXT_SolutionExistsAndNotBuildingAndNotDebugging" />
+        		<VisibilityItem guid="guidRubikToolsAddinCommandSet" id="Menu1" context="UICONTEXT_SolutionHasMultipleProjects" />
+        		<VisibilityItem guid="guidRubikToolsAddinCommandSet" id="Menu1" context="UICONTEXT_SolutionHasSingleProject" />
+        		<VisibilityItem guid="guidRubikToolsAddinCommandSet" id="Menu1" context="UICONTEXT_NotBuildingAndNotDebugging" />
+        	</VisibilityConstraints>
+
+  <Symbols>
+    <!-- This is the package guid. -->
+    <GuidSymbol name="guidPackage" value="{df45ada6-0b61-46cd-8167-e4fa55d2f8d4}" />
+    
+    <!-- This is the guid used to group the menu commands together -->
+    <GuidSymbol name="guidRubikToolsAddinCommandSet" value="{d6da2261-b1bc-456d-aa45-9b51efe65721}">
+	     <IDSymbol name="Group1" value="0x0001" />
+     <IDSymbol name="Button1" value="0x0003" />
+	     <IDSymbol name="Button3" value="0x0005" />
+	     <IDSymbol name="Menu1" value="0x0007" />
+	  </GuidSymbol>
+	</Symbols>
+
+</CommandTable>
+

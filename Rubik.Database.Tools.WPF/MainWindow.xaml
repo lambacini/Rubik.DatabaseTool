@@ -1,0 +1,67 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Rubik.Database.Tools.WPF" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Rubik.Database.Tools.WPF.MainWindow"
+        Title="MainWindow" Height="420" Width="560" xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation">
+	<Window.Resources>
+		<Storyboard x:Key="AnimStart">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="border">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.5"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="border">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.5"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="border">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="408"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="StopAnim">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="border">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0.5"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.5"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="border">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0.5"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.5"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="border">
+				<EasingDoubleKeyFrame KeyTime="0" Value="-367"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+	</Window.Resources>
+    <Grid>
+    	<Border BorderBrush="#FFDEDEDE" BorderThickness="1" HorizontalAlignment="Left" Width="192" Margin="2,2,0,2">
+    		<Grid Margin="0">
+    			<TreeView x:Name="MenuTree">
+    				<TreeView.Items>
+    					<TreeViewItem Header="Şablon Oluşturma Servisi">
+    						<TreeViewItem.Items>
+    							<TreeViewItem Header="Veritabanı Şablonu Oluştur" MouseDoubleClick="TreeViewItem_MouseDoubleClick"/>
+								<TreeViewItem Header="Şablon Düzenle"/>
+							</TreeViewItem.Items>			
+						</TreeViewItem>			
+						<TreeViewItem Header="Şablon Karşılaştırma">
+    						<TreeViewItem.Items>
+    							<TreeViewItem Header="Veritabanı - Şablon Karşılaştır" MouseDoubleClick="TreeViewItem_MouseDoubleClick_1"/>
+								<TreeViewItem Header="Şablon - Veritabanı Karşılaştır"/>
+							</TreeViewItem.Items>			
+						</TreeViewItem>
+					</TreeView.Items>			
+				</TreeView>
+    		</Grid>
+    	</Border>
+    	<Border x:Name="border" BorderBrush="#FFDEDEDE" BorderThickness="1" Margin="198,2,2,2" RenderTransformOrigin="0.5,0.5" Background="#FFBEBBBB">
+    		<Border.RenderTransform>
+    			<TransformGroup>
+    				<ScaleTransform/>
+    				<SkewTransform/>
+    				<RotateTransform/>
+    				<TranslateTransform/>
+    			</TransformGroup>
+    		</Border.RenderTransform>
+    	</Border></Grid>
+</Window>

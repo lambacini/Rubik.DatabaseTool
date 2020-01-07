@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="df45ada6-0b61-46cd-8167-e4fa55d2f8d4" xmlns="http://schemas.microsoft.com/dsltools/VSPackageDesigner">
+  <commandTable>
+    <rootHasCommandTable Id="d6da2261-b1bc-456d-aa45-9b51efe65721">
+      <commandTable Id="4c92b8e0-48d5-4f51-ad73-20f690f66eaa" packageGuid="df45ada6-0b61-46cd-8167-e4fa55d2f8d4" commandSetGuid="d6da2261-b1bc-456d-aa45-9b51efe65721" safeProjectName="RubikToolsAddin" counter="1" imagesGuid="4c92b8e0-48d5-4f51-ad73-20f690f66eaa">
+        <groups>
+          <group Id="5c7ef27b-30b2-4ca2-a962-0bf1198274b4" name="Group1" idNumeric="1">
+            <buttons>
+              <groupBaseReferencesButtons Id="f3e6b889-fbcc-4fae-ad2b-c2e0a9a7b477">
+                <buttonMoniker Id="2a01707e-712e-4f50-b99e-0096765745d5" />
+              </groupBaseReferencesButtons>
+              <groupBaseReferencesButtons Id="2b7f30ae-8f8e-4c2b-8802-79d9602c967b">
+                <buttonMoniker Id="2485b994-0ebf-4272-87b3-129731dfef74" />
+              </groupBaseReferencesButtons>
+            </buttons>
+          </group>
+        </groups>
+        <buttons>
+          <commandTableHasButtons Id="52f72527-ed55-4a55-a609-a3f20ad83a1e">
+            <button Id="2a01707e-712e-4f50-b99e-0096765745d5" name="Button1" idNumeric="3" buttonText="Button1" menuText="Button1" commandName="cmdidButton1" toolTipText="Button1" mod1="0" mod2="0" visibilityConstraints="TextEditor, Debugging, DesignMode, EmptySolution, FullScreenMode, NoSolution, SolutionBuilding, SolutionExists, SolutionExistsAndNotBuildingAndNotDebugging, SolutionHasMultipleProjects, SolutionHasSingleProject, NotBuildingAndNotDebugging" icon="msotcidProperties" commandFlags="0">
+              <toolWindows>
+                <buttonReferencesToolWindows Id="46c48cc4-d27e-4eb9-aaa7-6b4949566e34">
+                  <toolWindowMoniker Id="b465492f-0394-4a90-b927-a34fa0ada624" />
+                </buttonReferencesToolWindows>
+              </toolWindows>
+            </button>
+          </commandTableHasButtons>
+          <commandTableHasButtons Id="c9ae0801-cde2-4ff1-8b8a-047800c11329">
+            <button Id="2485b994-0ebf-4272-87b3-129731dfef74" name="Button3" idNumeric="5" buttonText="Button3" menuText="Button3" commandName="cmdidButton3" toolTipText="Button3" mod1="0" mod2="0" visibilityConstraints="0" icon="msotcidCodeWindow" commandFlags="0" />
+          </commandTableHasButtons>
+        </buttons>
+        <menuBases>
+          <commandTableHasMenuBases Id="dddae118-25fe-4a21-bc65-1e9618ba5b4a">
+            <menu Id="cba9cfa1-e6b6-41c4-b602-f3fd9168755c" name="Menu1" idNumeric="7" buttonText="Menu1" menuText="Menu1" toolTipText="Menu1" commandName="Menu1" visibilityConstraints="TextEditor, Debugging, DesignMode, EmptySolution, FullScreenMode, NoSolution, SolutionBuilding, SolutionExists, SolutionExistsAndNotBuildingAndNotDebugging, SolutionHasMultipleProjects, SolutionHasSingleProject, NotBuildingAndNotDebugging" commandFlags="0">
+              <groupBases>
+                <menuBaseReferencesGroupBases Id="11422ad5-4de8-4659-89a2-9bd06d1450bd">
+                  <groupMoniker Id="5c7ef27b-30b2-4ca2-a962-0bf1198274b4" />
+                </menuBaseReferencesGroupBases>
+              </groupBases>
+            </menu>
+          </commandTableHasMenuBases>
+        </menuBases>
+      </commandTable>
+    </rootHasCommandTable>
+  </commandTable>
+  <userInterface>
+    <rootHasUserInterface Id="c4375564-f222-486e-ba18-b26d07098c01">
+      <userInterface Id="b7816aba-32b9-4653-932f-6a6599341862">
+        <toolWindows>
+          <userInterfaceHasToolWindows Id="15cef71c-8f58-4279-b51b-5f491b3b3aef">
+            <toolWindow Id="b465492f-0394-4a90-b927-a34fa0ada624" name="ToolWindow1" idNumeric="8" type="WinForm" caption="ToolWindow1" userCodeGenerated="true" transient="false" multiInstance="false" visibilityConstraints="0" guid="06f3c052-bd56-4953-8405-6177b0755b52" />
+          </userInterfaceHasToolWindows>
+        </toolWindows>
+      </userInterface>
+    </rootHasUserInterface>
+  </userInterface>
+</root>

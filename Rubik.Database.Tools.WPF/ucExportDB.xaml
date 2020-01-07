@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="Rubik.Database.Tools.WPF.UcExportDb"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			 d:DesignWidth="450" d:DesignHeight="400"
+             mc:Ignorable="d" >
+    <Grid Background="White">
+    	<TreeView DisplayMemberPath="Name" x:Name="tree1" Margin="8,8,8,42.667" Background="White" BorderBrush="#FFD4D4D4"/>
+    	<Border BorderBrush="#FFD4D4D4" BorderThickness="1" Height="30.667" Margin="8,0,8,8" VerticalAlignment="Bottom">
+    		<Grid>
+    			<Button Content="Export To Sql" HorizontalAlignment="Left" Margin="3,3,0,3" Style="{DynamicResource ButtonStyle1}" Width="101" Click="ButtonClick" />
+                <Button Content="Export To Schema" HorizontalAlignment="Left" Margin="110,3,0,3" Style="{DynamicResource ButtonStyle1}" Width="116" Click="ButtonClick1" />
+                <Label Content="" Height="28" HorizontalAlignment="Left" Margin="281,1,0,0" Name="label1" VerticalAlignment="Top" Width="152" />
+            </Grid>
+    	</Border>
+    </Grid>
+</UserControl>
