@@ -1,0 +1,6 @@
+language: csharp
+solution: Rubik.Database.Tools.sln
+install:
+  - nuget restore Rubik.Database.Tools.sln
+script:
+  - msbuild /p:Configuration=Debug Rubik.Database.Tools.sln
